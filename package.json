@@ -1,0 +1,26 @@
+{
+  "name": "sippinsuds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sschools/bungo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sschools/bungo/issues"
+  },
+  "homepage": "https://github.com/sschools/bungo#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10",
+    "mustache-express": "^1.2.5"
+  }
+}
