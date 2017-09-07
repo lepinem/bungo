@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 const url = 'mongodb://localhost:27017/bongodb';
-const Beer = require('./models/beer');
+const Beer = require('./models/Beer');
 
 mongoose.connect(url, {useMongoClient: true});
 
