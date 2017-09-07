@@ -20,9 +20,9 @@ app.get("/", function(req, res) {
 
 app.post("/beers/home", function(req, res) {
   if (req.body.search) {
-    res.render("searchOptions");
+    res.render("searchoptions");
   } else {
-    res.render("addBeer");
+    res.render("postnew");
   }
 });
 
@@ -44,13 +44,13 @@ app.post("beers/searchByBrewery", function(req, res) {
 });
 
 app.post("beers/searchByType", function(req, res) {
-  getBeersByBrewery(req.body.type).then(function(beers) {
+  getBeersByType(req.body.type).then(function(beers) {
     res.render("list", {beers});
   });
 });
 
 app.post("beers/searchByRating", function(req, res) {
-  getBeersByBrewery(req.body.rating).then(function(beers) {
+  getBeersByRating(req.body.rating).then(function(beers) {
     res.render("list", {beers});
   });
 });
