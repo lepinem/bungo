@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {{>Header}}
+  <body>
+      <div class="row">
+
+         {{#beerpost}}
+         <div class="post">
+          <img class="pic" src={{url}} alt="{{name}}"/>
+         <a href={{beer}}>{{name}}</a>
+        <p>{{type}} - {{brewery}}</p>
+
+        </div>
+       {{/beerpost}}
+
+    </div>
+  </body>
+</html>
