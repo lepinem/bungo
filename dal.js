@@ -1,7 +1,7 @@
 //dal.js
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-const url = 'mongodb://localhost:27017/bongodb';
+const url = 'mongodb://localhost:27017/bungodb';
 const Beer = require('./models/Beer');
 
 mongoose.connect(url, {useMongoClient: true});
