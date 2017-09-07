@@ -22,6 +22,14 @@ app.get("/beers/home", function(req, res) {
   res.render("home");
 });
 
+app.get("/beers/searchOptions", function(req, res) {
+  res.render("searchOptions");
+});
+
+app.get("/beers/postnew", function(req, res) {
+  res.render("postnew");
+});
+
 app.get("/beers/one/:id", function(req, res) {
   getBeerById(req.params.id).then(function(beer) {
     res.render("beerDetail", beer);
