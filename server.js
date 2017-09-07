@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const app = express();
 
+
 app.engine("mustache", mustacheExpress());
 app.set("view engine", "mustache");
 app.set("views", __dirname + "/views");
@@ -19,6 +20,14 @@ app.get("/", function(req, res) {
 
 app.get("/beers/home", function(req, res) {
   res.render("home");
+});
+
+app.get("/beers/searchOptions", function(req, res) {
+  res.render("searchOptions");
+});
+
+app.get("/beers/postnew", function(req, res) {
+  res.render("postnew");
 });
 
 app.get("/beers/one/:id", function(req, res) {
