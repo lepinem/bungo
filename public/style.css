@@ -1,8 +1,32 @@
 body {
-  background-color: black;
+  background-color: rgba(36, 14, 4, 1);
+  height: 100%;
+  text-align: center;
+  color: #DAD5CD;
 }
 
-.container {
-  width: 90%;
-  background-image: url('./images/photobeer-s.jpg');
+.main {
+  margin: 0 auto;
+  margin-top: 30px;
+  /*padding: 0 30px;*/
+  padding-top: 50px;
+  width: 90vw;
+  height: 90vh;
+  background-image: url('./images/drink-and-wheat-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.footer {
+  color: #DAD5CD;
+  font-size: 0.3em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  body {
+    background-image: url('./images/drink-and-wheat.jpg');
+  }
 }
