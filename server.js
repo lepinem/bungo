@@ -3,7 +3,6 @@ const mustacheExpress = require("mustache-express");
 const {getAllBeers, getBeersByBrewery, getBeersByType, getBeersByRating} = require("./dal");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-const Beer = require('./models/Beer');
 const app = express();
 
 app.engine("mustache", mustacheExpress());
@@ -18,9 +17,19 @@ app.get("/", function(req, res) {
   res.redirect("/beers/home");
 });
 
+app.get("/beers/home", function(req, res) {
+  res.render("home");
+});
+
+app.get("/beers/one/:id", function(req, res) {
+  getBeerById(req.params.id).then(function(beer) {
+    res.render("beerDetail", beer);
+  });
+});
+
 app.post("/beers/home", function(req, res) {
   if (req.body.search) {
-    res.render("searchoptions");
+    res.render("searchOptions");
   } else {
     res.render("postnew");
   }
@@ -56,5 +65,5 @@ app.post("beers/searchByRating", function(req, res) {
 });
 
 app.listen(3000, function () {
-  console.log("Successfully started user directory application on: 3000");
+  console.log("Sippin Suds running on port 3000");
 });
