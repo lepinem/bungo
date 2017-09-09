@@ -55,20 +55,22 @@ app.post("/beers/searchOptions", function(req, res) {
   }
 });
 
-app.post("beers/searchByBrewery", function(req, res) {
+app.post("/beers/searchByBrewery", function(req, res) {
   getBeersByBrewery(req.body.brewery).then(function(beers) {
     res.render("list", {beers});
   });
 });
 
-app.post("beers/searchByType", function(req, res) {
+app.post("/beers/searchByType", function(req, res) {
   getBeersByType(req.body.type).then(function(beers) {
+    console.log(beers)
     res.render("list", {beers});
   });
 });
 
-app.post("beers/searchByRating", function(req, res) {
+app.post("/beers/searchByRating", function(req, res) {
   getBeersByRating(req.body.rating).then(function(beers) {
+    console.log(beers)
     res.render("list", {beers});
   });
 });

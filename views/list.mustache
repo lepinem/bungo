@@ -2,17 +2,18 @@
 <html>
   {{>_head}}
   <body>
-      <div class="row container main">
-
-         {{#search}}
-         <div class="SearchResults">
+    <div class="container main center-block">
+      <div class="inner cover">
+        <h1>View Beers</h1>
+        {{#beers}}
+        <div class="SearchResults">
           <a href={{id}}>{{name}}</a>
-        <p>{{type}} - {{brewery}}</p>
-
+          <p>{{type}} - {{brewery}}</p>
         </div>
-       {{/search}}
+       {{/beers}}
 
-    </div>
+     </div> <!-- end of inner cover div-->
+    </div> <!-- end of main container div-->
     {{>_footer}}
   </body>
 </html>
