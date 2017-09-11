@@ -63,7 +63,6 @@ app.post("/beers/searchByBrewery", function(req, res) {
 
 app.post("/beers/searchByType", function(req, res) {
   getBeersByType(req.body.type).then(function(beers) {
-    console.log(beers)
     res.render("list", {beers});
   });
 });

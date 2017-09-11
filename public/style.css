@@ -10,8 +10,7 @@ body {
 }
 
 .main {
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto;
   /*padding: 0 30px;*/
   padding-top: 50px;
   width: 90vw;
@@ -32,24 +31,34 @@ div.row {
 
 .button {
   border: 1px solid #FEF6E7;
-  background-color: rgba(218, 213, 205, 0.4);
+  background-color: rgba(21, 16, 29, 0.4);
   color: #FEF6E7;
   transition-property: background-color border color;
   transition-duration: 1s;
 }
 
 a {
-  color: #240E04;
+  color: #FEF6E7;
   text-decoration: none;
   font-family: 'Lora', serif;
+}
+
+a.searchlink {
+  text-decoration: underline;
 }
 
 .footer {
   color: #FEF6E7;
   font-size: 0.3em;
+  padding-top: 20px;
+  margin-top: 25px;
 }
 
 /*Form styles*/
+
+#form-container {
+  padding-bottom: 15px;
+}
 
 div.form-group {
   margin: 10px 0;
@@ -80,4 +89,10 @@ label {
 
 .input-group {
   margin: 10px auto;
+}
+
+/*List styles*/
+
+div.SearchResults {
+  font-family: 'Lato', sans-serif;
 }

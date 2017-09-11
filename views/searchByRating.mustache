@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {{>_head}}
+  <body>
+    <div class="container main center-block">
+      <div class="inner cover">
+      <h1 class="cover-heading">Search by Rating</h1>
+      <div class="row">
+        <div class="col-sm-10">
+          <form class="form-horizontal input-group" action="/beers/searchByRating" method="POST">
+            <select class="form-control" id="rating" name="rating" required>
+              <option value="">Search by rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <span class="input-group-btn">
+              <button type="submit" class="button btn btn-group-sm">Go!</button>
+            </span>
+          </form>
+        </div>
+      </div> <!--end of row div -->
+      <div class="form-group">
+        <a id="home-btn" href="/beers/home" class="button btn btn-default btn-large">Home</a>
+      </div>
+    </div> <!--end of inner cover div -->
+  </div> <!--end of main container div -->
+     {{>_footer}}
+   </body>
+ </html>

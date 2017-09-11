@@ -7,9 +7,12 @@
         <h1>View Beers</h1>
         {{#beers}}
         <div class="SearchResults">
-          <a href={{id}}>{{name}}</a>
+          <a href='/beers/one/{{id}}'>{{name}}</a>
           <p>{{type}} - {{brewery}}</p>
         </div>
+       {{/beers}}
+       {{^beers}}
+        <p>Whoops, looks like there's no brews here. Want to <a class="searchlink" href="/beers/searchOptions">try another search?</a></p>
        {{/beers}}
 
      </div> <!-- end of inner cover div-->
