@@ -6,8 +6,9 @@
       <div class="inner cover">
         <h1>View Beers</h1>
         {{#beers}}
+        <p class="lead">Click on a name to view more details.</p>
         <div class="SearchResults">
-          <a href='/beers/one/{{id}}'>{{name}}</a>
+          <a class="result"  href='/beers/one/{{id}}'>{{name}}</a>
           <p>{{type}} - {{brewery}}</p>
         </div>
        {{/beers}}
