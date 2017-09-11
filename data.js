@@ -273,3 +273,7 @@
     "comments": "Light and refreshing Belgian-style table beer with notes of biscuit and honey.",
     "photo": ""
   }
+<<<<<<< HEAD
+=======
+]
+>>>>>>> bc5f341609de12badfc63120e8d50bf9d75e73bb

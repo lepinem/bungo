@@ -1,32 +1,132 @@
+/*Default styles; see below for add, search and list styles*/
+
 body {
-  background-color: rgba(36, 14, 4, 1);
+  background-color: rgba(21, 16, 29, 1);
+  /*color hex: 15101D */
   height: 100%;
   text-align: center;
-  color: #DAD5CD;
+  color: #FEF6E7;
+  font-family: 'Lora', serif;
 }
 
 .main {
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto;
   /*padding: 0 30px;*/
   padding-top: 50px;
   width: 90vw;
   height: 90vh;
-  background-image: url('./images/drink-and-wheat-mobile.jpg');
+  overflow: scroll;
+  background-image: url('./images/taps.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-
-.footer {
-  color: #DAD5CD;
-  font-size: 0.3em;
+h1 {
+  font-size: 3em;
+  padding: 5px;
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {
-  body {
-    background-image: url('./images/drink-and-wheat.jpg');
-  }
+div.row {
+  margin: 0 10px;
+}
+
+.button {
+  border: 1px solid #FEF6E7;
+  background-color: rgba(21, 16, 29, 0.4);
+  color: #FEF6E7;
+  transition-property: background-color border color;
+  transition-duration: 1s;
+}
+
+a {
+  color: #FEF6E7;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+}
+
+a.searchlink {
+  text-decoration: underline;
+}
+
+.footer {
+  color: #FEF6E7;
+  font-size: 0.3em;
+  padding-top: 20px;
+  margin-top: 25px;
+}
+
+/*Form styles*/
+
+#form-container {
+  padding-bottom: 15px;
+}
+
+div.form-group {
+  margin: 10px 0;
+}
+
+.form-group div.col-sm-10 {
+  margin: 0 auto;
+}
+
+input, select, option, textarea {
+  font-family: 'Lato', sans-serif;
+  border: 1px solid #FEF6E7;
+  background-color: rgba(21, 16, 29, 0.4);
+  color: #FEF6E7;
+}
+
+label {
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(21, 16, 29, 0.4);
+  color: #FEF6E7
+}
+
+#home-btn {
+  margin: 0 auto;
+}
+
+/*Search form styles*/
+
+.input-group {
+  margin: 10px auto;
+}
+
+/*List styles*/
+
+div.SearchResults {
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(21, 16, 29, 0.4);
+  color: #FEF6E7;
+  border: 1px solid #FEF6E7;
+  padding: 10px;
+}
+
+a.result {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+p.lead {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8em;
+}
+
+/*Detail styles*/
+
+img.beerPic {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+div.Beer {
+  background-color: rgba(21, 16, 29, 0.4);
+  padding: 15px 0;
+  margin: 0 auto;
+}
+
+p.description {
+  font-family: 'Lato', sans-serif;
 }
