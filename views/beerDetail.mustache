@@ -2,18 +2,27 @@
 <html>
   {{>_head}}
   <body>
-      <div class="row main container">
-
-         {{#beerdetail}}
+    <div class="container main center-block">
+      <div class="inner cover">
+        {{#beerDetail}}
+        <h1>{{name}}</h1>
          <div class="Beer">
-          <img class="pic" src={{brewery}} alt="{{name}}"/>
-         <a href={{id}}>{{name}}</a>
-        <p>{{type}} - {{brewery}}</p>
-
+          {{#photo}}
+          <img class="pic" src={{photo}} alt="{{name}}"/>
+          {{/photo}}
+          {{^photo}}
+          <img class="beerPic"  src="./images/photobeer-s.jpg" alt="generic beer photo">
+          {{/photo}}
+          <h2>{{name}} - {{brewery}}</h2>
+          <p class="description">Rating: {{rating}}</p>
+          <p class="description">{{comments}}</p>
         </div>
-       {{/beerdetail}}
-
-    </div>
+       {{/beerDetail}}
+      </div> <!--end inner cover div-->
+       <div class="form-group">
+         <a id="home-btn" href="/beers/home" class="button btn btn-default btn-large">Home</a>
+       </div>
+    </div><!--end inner cover div -->
     {{>_footer}}
   </body>
 </html>
