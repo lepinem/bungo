@@ -2,69 +2,75 @@
 <html>
   {{>_head}}
   <body>
-    <h1>Add A Beer To SippinSuds</h1>
-    <form class="form-horizontal">
-  <div class="form-group">
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="brewery" placeholder="Brewery">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder="Name of Beer">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-10">
-      <select class="form-control" id="type">
-        <option value="" disabled selected>Beer Type or Style</option>
-        <option value="lager">Lager</option>
-        <option value="ipa">IPA</option>
-        <option value="stout">Stout</option>
-        <option value="porter">Porter</option>
-        <option value="wheat">Wheat</option>
-        <option value="ale">Ale</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-10">
-      <select class="form-control" id="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3" selected>3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" name="seasonal"> Seasonal
-        </label>
+    <div id="form-container" class="container main center-block">
+      <h1>Add A Beer</h1>
+      <form class="inner cover form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="brewery" placeholder="Brewery" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="Name of Beer" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <select class="form-control" id="type" required>
+              <option value="" disabled selected>Beer Type or Style</option>
+              <option value="lager">Lager</option>
+              <option value="ipa">IPA</option>
+              <option value="stout">Stout</option>
+              <option value="porter">Porter</option>
+              <option value="wheat">Wheat</option>
+              <option value="ale">Ale</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <select class="form-control" id="rating" required>
+              <option value="">Rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="seasonal"> Seasonal
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="whiteWhale"> White Whale
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <textarea class="form-control" id="comments" placeholder="Comments:"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="button btn btn-default btn-block">Add This Beer!</button>
+          </div>
+        </div>
+      </form>
+      <div class="form-group">
+        <a id="home-btn" href="/beers/home" class="button btn btn-default btn-large">Home</a>
       </div>
     </div>
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" name="whiteWhale"> White Whale
-        </label>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-10">
-        <textarea class="form-control" id="comments" placeholder="Comments:"></textarea>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Add This Beer!</button>
-    </div>
-  </div>
-</form>
   </body>
   {{>_footer}}
 </html>

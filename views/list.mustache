@@ -2,17 +2,21 @@
 <html>
   {{>_head}}
   <body>
-      <div class="row container main">
-
-         {{#search}}
-         <div class="SearchResults">
-          <a href={{id}}>{{name}}</a>
-        <p>{{type}} - {{brewery}}</p>
-
+    <div class="container main center-block">
+      <div class="inner cover">
+        <h1>View Beers</h1>
+        {{#beers}}
+        <div class="SearchResults">
+          <a href='/beers/one/{{id}}'>{{name}}</a>
+          <p>{{type}} - {{brewery}}</p>
         </div>
-       {{/search}}
+       {{/beers}}
+       {{^beers}}
+        <p>Whoops, looks like there's no brews here. Want to <a class="searchlink" href="/beers/searchOptions">try another search?</a></p>
+       {{/beers}}
 
-    </div>
+     </div> <!-- end of inner cover div-->
+    </div> <!-- end of main container div-->
     {{>_footer}}
   </body>
 </html>
